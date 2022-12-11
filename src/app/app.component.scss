@@ -1,0 +1,48 @@
+@use "../global";
+
+.button {
+  background-color: global.$white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: global.$mainDark;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-increment {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.button-decrement {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.button:hover {
+  background-color: global.$gray;
+}
+
+.box-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.load-btn {
+  background-color: global.$main;
+  color: global.$white;
+  border: none;
+  padding: 20px;
+  text-transform: uppercase;
+  margin-top: 4rem;
+  transition: all 0.6s ease-in-out;
+}
+
+.load-btn:hover {
+  background-color: global.$mainDark;
+}
