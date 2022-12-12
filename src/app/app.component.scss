@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   color: global.$mainDark;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.05s ease-in-out;
 }
 
 .button-increment {
@@ -26,6 +26,10 @@
 
 .button:hover {
   background-color: global.$gray;
+}
+
+.button:active {
+  transform: scale(106%);
 }
 
 .box-wrapper {

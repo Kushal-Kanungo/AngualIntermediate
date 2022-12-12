@@ -12,6 +12,8 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   animation: pop 0.2s ease-out;
   border: none;
+  z-index: 10;
+  position: relative;
 }
 
 @keyframes pop {
