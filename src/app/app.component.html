@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-center flex-column align-items-center">
-  <button class="load-btn" (click)="show()">Load Component</button>
+  <!-- <button class="load-btn" (click)="show()">Load Component</button>
 
   <div class="box-wrapper mt-5">
     <button class="button button-decrement" (click)="decrement()">
@@ -9,5 +9,12 @@
     <button class="button button-increment" (click)="increment()">
       <i class="bi bi-plus-lg"></i>
     </button>
+  </div> -->
+
+  <div class="mt-4 d-flex flex-col gap-4">
+    <app-shipping-box
+      *ngFor="let product of products"
+      [product]="product"
+    ></app-shipping-box>
   </div>
 </div>
