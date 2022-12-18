@@ -29,6 +29,7 @@ export class AppComponent {
       subHeading: 'Apple',
       description: 'Ultra fast and sleek design. Made for power users.',
       imageUrl: '../../assets/images/products/laptop.jpeg',
+      // imageUrl: 'https://picsum.photos/640/360',
       price: 130000,
     },
     {
@@ -37,6 +38,7 @@ export class AppComponent {
       subHeading: 'Samsung',
       description: 'Best process and best camera. Capture moments like a pro.',
       imageUrl: '../../assets/images/products/phone.webp',
+      // imageUrl: 'https://picsum.photos/640/361',
       price: 79999,
     },
     {
@@ -45,6 +47,7 @@ export class AppComponent {
       subHeading: 'Bose',
       description: 'Best sound in the industry. Feel the music in soul.',
       imageUrl: '../../assets/images/products/headphone.webp',
+      // imageUrl: 'https://picsum.photos/640/362',
       price: 35999,
     },
   ];

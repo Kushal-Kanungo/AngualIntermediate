@@ -1,5 +1,5 @@
-<div class="product-card">
-  <div class="fade-in" *ngIf="!detailsVisible">
+<div class="product-card" appScale>
+  <div class="fade-in" *appVisible="!detailsVisible">
     <img [src]="product.imageUrl" alt="" srcset="" />
     <div class="wrapper p-4">
       <h3>{{ product.name }}</h3>
@@ -17,6 +17,7 @@
       </button>
     </div>
   </div>
+
   <div class="shipping-detail pt-5" *ngIf="detailsVisible">
     <button class="close" (click)="closeDetailsHandle()">
       <i class="bi bi-x-circle"></i>

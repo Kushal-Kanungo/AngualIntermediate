@@ -9,9 +9,12 @@ import { AppComponent } from './app.component';
 import { BoxComponent } from './box/box.component';
 import { ShippingBoxComponent } from './shipping-box/shipping-box.component';
 import { RedBgDirective } from './red-bg.directive';
+import { VisibleDirective } from './visible.directive';
+import { ScaleDirective } from './scale.directive';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
-  declarations: [AppComponent, BoxComponent, ShippingBoxComponent, RedBgDirective],
+  declarations: [AppComponent, BoxComponent, ShippingBoxComponent, RedBgDirective, VisibleDirective, ScaleDirective, AddProductComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
