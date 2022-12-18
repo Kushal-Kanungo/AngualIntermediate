@@ -1,1 +1,58 @@
-<p>add-product works!</p>
+<p-dialog
+  header="Add Product"
+  [(visible)]="display"
+  [modal]="true"
+  (onHide)="onClose()"
+>
+  <div class="row">
+    <div class="col-12">
+      <form
+        class="px-5"
+        [formGroup]="addProductForm"
+        (ngSubmit)="addUserHandle()"
+      >
+        <input
+          [ngClass]="{
+            'warn-valid':
+              productName && productName.touched && productName.invalid
+          }"
+          type="text"
+          placeholder="Product Name"
+          formControlName="productName"
+        />
+
+        <input
+          [ngClass]="{
+            'warn-valid':
+              companyName && companyName.touched && companyName.invalid
+          }"
+          type="text"
+          placeholder="Company Name"
+          formControlName="companyName"
+        />
+
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="3"
+          placeholder="Description"
+          formControlName="description"
+        ></textarea>
+
+        <input type="number" placeholder="Price" formControlName="price" />
+        <button class="add-user-btn px-2">Add Product</button>
+      </form>
+    </div>
+  </div>
+</p-dialog>
+
+<button
+  type="button"
+  (click)="showDialog()"
+  icon="pi pi-info-circle"
+  label="Show"
+  class="btn btn-info text-white mx-4"
+>
+  Add Product
+</button>

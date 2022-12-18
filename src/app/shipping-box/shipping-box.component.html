@@ -2,7 +2,7 @@
   <div class="fade-in" *appVisible="!detailsVisible">
     <img [src]="product.imageUrl" alt="" srcset="" />
     <div class="wrapper p-4">
-      <h3>{{ product.name }}</h3>
+      <h5>{{ product.name }}</h5>
       <div class="text-muted">{{ product.subHeading }}</div>
       <p class="mt-4">{{ product.description }}</p>
       <div class="price">
@@ -10,7 +10,7 @@
       </div>
       <button
         appRedBg
-        class="btn btn-info text-white px-5 py-2 mt-3"
+        class="btn btn-info text-white px-5 mt-3"
         (click)="showDetailsHandle()"
       >
         Show

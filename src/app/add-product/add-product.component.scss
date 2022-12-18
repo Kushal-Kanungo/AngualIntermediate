@@ -1,0 +1,81 @@
+$creamAccent: #f6f6f6;
+$redAccent: #3ab4f2;
+$darkCreamAccent: #f2df3a;
+$darkAccent: #0078aa;
+
+$danger: #ea5455;
+$success: #28c76f;
+$warn: #ff9f43;
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input,
+textarea {
+  // margin-top: 1rem;
+  border: none;
+  background-color: $creamAccent;
+  border-bottom: 2px solid $creamAccent;
+  padding: 10px 4px 10px 4px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  margin-right: 0.6rem;
+}
+
+form input:focus,
+textarea:hover {
+  outline: none;
+  border-bottom: 2px solid $redAccent;
+}
+
+select {
+  margin-top: 1rem;
+  border: none;
+  background-color: $creamAccent;
+  border-bottom: 2px solid $creamAccent;
+  padding: 10px 4px 10px 4px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+}
+
+option {
+  padding: 4px 0px 4px 0px;
+}
+
+.add-user-btn {
+  padding: 10px 2px 10px 2px;
+  background-color: $redAccent;
+  border: none;
+  color: $creamAccent;
+  width: 8rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-user-btn:disabled {
+  background-color: $creamAccent;
+  color: black;
+}
+
+.add-user-btn:hover {
+  background-color: $darkAccent;
+  color: white;
+}
+.add-user-btn:disabled:hover {
+  background-color: $creamAccent;
+  color: black;
+}
+
+.warn-valid {
+  border-bottom: 2px solid $danger !important;
+}
+
+.image-wrapper {
+  img {
+    width: 100%;
+  }
+}
