@@ -4,7 +4,7 @@
     <div class="wrapper p-4">
       <h5>{{ product.name }}</h5>
       <div class="text-muted">{{ product.subHeading }}</div>
-      <p class="mt-4">{{ product.description }}</p>
+      <p class="mt-1">{{ product.description }}</p>
       <div class="price">
         {{ product.price | currency : "INR" : "symbol" }}
       </div>
@@ -18,11 +18,11 @@
     </div>
   </div>
 
-  <div class="shipping-detail pt-5" *ngIf="detailsVisible">
+  <div class="shipping-detail pt-1" *ngIf="detailsVisible">
     <button class="close" (click)="closeDetailsHandle()">
-      <i class="bi bi-x-circle"></i>
+      <i class="bi bi-x text-muted"></i>
     </button>
-    <h4 class="p-4 fw-light text-success fs-2 mb-4">Shipping Details</h4>
+    <div class="p-4 fw-light text-success heading mb-2">Shipping Details</div>
     <p-timeline [value]="events">
       <ng-template pTemplate="content" let-event>
         <small class="p-text-secondary">{{ event.date }}</small>

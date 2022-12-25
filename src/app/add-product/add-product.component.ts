@@ -20,7 +20,7 @@ export class AddProductComponent {
 
   onClose() {
     this.userForm.reset();
-    console.log('dialog closwed');
+    console.log('dialog closed');
   }
 
   addProductForm = new FormGroup({
@@ -59,7 +59,7 @@ export class AddProductComponent {
       subHeading: this.userForm.value.companyName as string,
       description: this.userForm.value.description as string,
       price: Number(this.userForm.value.price),
-      imageUrl: 'https://fakeimg.pl/640x360/',
+      imageUrl: '../../assets/images/thumbnail.jpg',
     };
     this.productService.addProduct(newProduct);
     this.display = false;
