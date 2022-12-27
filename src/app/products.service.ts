@@ -7,7 +7,8 @@ import { Product } from './Modal/Product';
 export class ProductsService {
   constructor() {}
 
-  private _products: Product[] = [];
+  private _products: Product[] = [{id:1,name:'Macbook', subHeading:'Apple', description:'sesf',imageUrl:'image//',price:2000  }];
+
   public get products(): Product[] {
     return this._products;
   }

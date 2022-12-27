@@ -13,4 +13,10 @@ describe('ProductsService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should have data', ()=>{
+    expect(service.products[0].id).toBe(1)
+  })
+
+  
 });
