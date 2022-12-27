@@ -5,7 +5,7 @@ import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { TimelineModule } from 'primeng/timeline';
 import { DialogModule } from 'primeng/dialog';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,7 @@ import { VisibleDirective } from './visible.directive';
 import { ScaleDirective } from './scale.directive';
 import { AddProductComponent } from './add-product/add-product.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PrefixPipe } from './prefix.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ScaleDirective,
     AddProductComponent,
     NavbarComponent,
+    PrefixPipe,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserAnimationsModule,
     DialogModule,
     ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

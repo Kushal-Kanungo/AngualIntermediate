@@ -12,20 +12,14 @@
         (ngSubmit)="addUserHandle()"
       >
         <input
-          [ngClass]="{
-            'warn-valid':
-              productName && productName.touched && productName.invalid
-          }"
           type="text"
           placeholder="Product Name"
           formControlName="productName"
         />
-
+        <div style="height: 20px">
+          {{ addProductForm.value.productName | prefix }}
+        </div>
         <input
-          [ngClass]="{
-            'warn-valid':
-              companyName && companyName.touched && companyName.invalid
-          }"
           type="text"
           placeholder="Company Name"
           formControlName="companyName"
@@ -41,7 +35,12 @@
         ></textarea>
 
         <input type="number" placeholder="Price" formControlName="price" />
-        <button class="btn btn-info text-white ts-1 px-2">Add Product</button>
+        <button
+          class="btn btn-info text-white ts-1 px-2"
+          [disabled]="!addProductForm.valid"
+        >
+          Add Product
+        </button>
       </form>
     </div>
   </div>

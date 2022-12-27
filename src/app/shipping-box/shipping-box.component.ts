@@ -8,11 +8,11 @@ import { Product } from '../Modal/Product';
   styleUrls: ['./shipping-box.component.scss'],
 })
 export class ShippingBoxComponent {
-  @Input() product!: Product;
+  @Input() product: Product = { } as Product;
   detailsVisible = false;
-
+  
   events!: any[];
-
+  val = 0
   showDetailsHandle() {
     this.detailsVisible = true;
   }
@@ -48,5 +48,8 @@ export class ShippingBoxComponent {
         color: '#607D8B',
       },
     ];
+    console.log("Product", this.product);
+    
+
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { Product } from '../Modal/Product';
@@ -11,7 +11,6 @@ import { ProductsService } from '../products.service';
 })
 export class AddProductComponent {
   display: boolean = false;
-
   constructor(private productService: ProductsService) {}
 
   showDialog() {
@@ -21,6 +20,7 @@ export class AddProductComponent {
   onClose() {
     this.userForm.reset();
     console.log('dialog closed');
+    
   }
 
   addProductForm = new FormGroup({
@@ -63,5 +63,6 @@ export class AddProductComponent {
     };
     this.productService.addProduct(newProduct);
     this.display = false;
+    return true
   }
 }

@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavbarComponent } from './navbar.component';
+import { AddProductComponent } from '../add-product/add-product.component';
+import { DialogModule } from 'primeng/dialog';
+import { PrefixPipe } from '../prefix.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
@@ -8,7 +12,8 @@ describe('NavbarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavbarComponent ]
+      imports:[DialogModule, ReactiveFormsModule,],
+      declarations: [ NavbarComponent, AddProductComponent, PrefixPipe ]
     })
     .compileComponents();
 

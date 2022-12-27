@@ -79,3 +79,7 @@ option {
     width: 100%;
   }
 }
+
+input.ng-invalid.ng-touched{
+  border-bottom: 2px solid $danger !important;
+}

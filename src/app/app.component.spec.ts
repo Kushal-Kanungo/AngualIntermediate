@@ -1,15 +1,26 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ShippingBoxComponent } from './shipping-box/shipping-box.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { DialogModule } from 'primeng/dialog';
+import { PrefixPipe } from './prefix.pipe';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        DialogModule
+        
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        NavbarComponent,
+        ShippingBoxComponent,
+        AddProductComponent,
+        PrefixPipe,
       ],
     }).compileComponents();
   });
@@ -20,16 +31,4 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'AngualIntermediate'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('AngualIntermediate');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('AngualIntermediate app is running!');
-  });
 });
